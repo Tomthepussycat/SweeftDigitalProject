@@ -104,6 +104,14 @@ public class AppFunc
         }
     }
 
+    // ------------------------------------------------------------- COUNT VARIANTS -----------------------------------------------------------///////////
+    // Count of varieties for this task would be the n-th fibonacci number ( where n is quantity of stairs ) 
+    public int CountVariants(int stairCount)
+    {
+        if (stairCount <= 1)
+            return stairCount;
+        return CountVariants(stairCount - 1) + CountVariants(stairCount - 2);
+    }
 
 }
 
